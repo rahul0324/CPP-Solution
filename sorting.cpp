@@ -57,7 +57,25 @@
     		}
 
     		printarray(arr,n);   // this to print the array after sorting.
+
+
+// wave sort - print the array in the wave form like 1st element should be bigger than 2nd and third element should be smaller than 2nd.
+// we have to create a peak in the wave form like ^^^^ -
+
+	void wavesort(int arr[], int n){  
+
+    		for(int i=0; i<n; i+=2){
+        		if(i>0 && arr[i] < arr[i-1]){  // checking for every even place element and making it bigger than their adjacent elements
+            			swap(arr[i],arr[i-1]);
+        		}
+        		if(i<=n-2 && arr[i] < arr[i+1]){
+            			swap(arr[i],arr[i+1]);
+        		}
+    		}
+
+    		printarray(arr,n);
 	}
+	
 
 
 
