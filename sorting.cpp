@@ -35,3 +35,30 @@
 	}
 
 
+// counting sort - As the name saya we sort the array as counting the array of each elements - this sorting is not suitable for large numbers as we create a temp array of maxm element.
+
+	void countingsort(int arr[], int n, int max){
+
+    		int temp[max] = {0};
+    		for(int i=0; i<n; i++){
+        		temp[arr[i]]++;
+    		}
+
+    		printarray(temp,max);  // this print is to check whether our freq array is built correctly or not .
+
+    		int j = 0;
+    		for(int i=0; i<max; i++){
+        		while(temp[i]>0){
+            			if(temp[i] > 0){
+                			arr[j] = i; j++;
+                			temp[i] -= 1;
+            			}
+        		}    
+    		}
+
+    		printarray(arr,n);   // this to print the array after sorting.
+	}
+
+
+
+
