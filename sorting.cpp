@@ -59,6 +59,8 @@
     		printarray(arr,n);   // this to print the array after sorting.
 
 
+
+// *** IMPORTANT FOR INTERVIEW ****
 // wave sort - print the array in the wave form like 1st element should be bigger than 2nd and third element should be smaller than 2nd.
 // we have to create a peak in the wave form like ^^^^ -
 
